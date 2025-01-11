@@ -11,16 +11,16 @@
          <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="/static/particles.js"></script>
     <style>
-   body { color: white; }
+   body { color: white;    overflow: hidden; /* Prevent page scrolling */}
 
 #particles-js {
    position: fixed;
    top: 0;
    left: 0;
-   width: 100vw;
-   height: 100vh;
-   z-index: -1; /* Ensure it's behind all content */
-   pointer-events: none; /* Allow clicks to pass through */
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
    background-color: black;
 }
 
