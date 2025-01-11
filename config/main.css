@@ -50,8 +50,8 @@ border: 3px solid var(--accent-color);
   padding: 0 20px; /* Horizontal padding */
   box-sizing: border-box;
   overflow: auto; /* Enable scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
-  background-color: #f5f5f5; /* Optional background color */
+  scroll-behavior: smooth; /* Smooth scrolling */\
+  background-color: transparent;
 }
 
 
