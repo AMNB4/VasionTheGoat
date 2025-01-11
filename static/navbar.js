@@ -173,7 +173,7 @@ function insertNavbar() {
 
   </style>
   <div class="navbar">
-    <a href="/static/index.html">Home</a>
+    <a href="/">Home</a>
     <a href="/g.html">Games</a>
   </div>
   `;
