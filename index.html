@@ -1,0 +1,70 @@
+<html>
+   <head>
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="/static/particles.js"></script>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <link rel="stylesheet" href="/index.css">
+      <link rel="icon" type="image/x-icon" href="/static/images/frp.jpg">
+      <script src="/static/navbar.js"></script>
+      <title>Rexy's Planet</title>
+<style>
+   body { color: white; }
+#particles-js{ position:absolute; width: 100%; height: 100%; background-color: black; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+   /* Content container styles */
+   #content {
+      position: relative; /* Keeps it above the particles */
+   }
+   .img {
+      z-index: 1;
+   }
+</style>
+</head>
+   <body>
+   <div id="particles-js" style=" position:absolute; width: 100%; height: 100%; background-color: black; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;"></div>
+      <img src="https://counter.websiteout.com/compte.php?S=https%3A%2F%2Frexysplanet.netlify.app%2Fstatic%2F&amp;C=7&amp;D=10&amp;N=5&amp;M=0&amp;clt=0&amp;ca=1" alt="" border="0">
+      <link rel="shortcut icon" type="image/jpg" href="/static/images/frp.jpg">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+      <div id="header">
+         <img class="img" src="/static/images/frp.jpg" alt="Logo">
+         <center><h1>Vasion Network</h1></center>
+         <center><form id="uv-form">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"> 
+            <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input">
+          </form></center>
+      </div>
+      <script src="/static/uv/uv.bundle.js" defer=""></script>
+      <script src="/static/uv/uv.config.js" defer=""></script>
+      <script src="/uv/register-sw.js" defer=""></script>
+      <script src="/uv/search.js" defer=""></script>
+      <script src="/uv/index.js" defer=""></script>
+          <script>
+function openGame() {
+        var url = window.location.origin;
+
+        // Open a new window with the desired URL
+        const win = window.open('about:blank', '_blank');
+
+        if (win) {
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.src = url;
+                iframe.allowFullscreen = true;
+                iframe.style = "position: fixed; top: 0px; bottom: 0px; right: 0px; width: 100%; border: none; margin: 0; padding: 0; overflow: hidden; height: 100%;";
+
+                // Append the iframe to the new window's document body
+                win.document.body.appendChild(iframe);
+
+                // Redirect the original window
+                window.location.replace('https://classroom.google.com/');
+        } else {
+            alert('Unable to open the new window. Please check your popup blocker settings.');
+        }
+    }
+    </script>
+</body>
+</html>
