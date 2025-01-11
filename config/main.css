@@ -9,10 +9,6 @@
 }
 
 
-* {
-  font-family: ubuntu;
-  transition: all 0.3s ease;
-}
 /* General styles */
 body {
   color: var(--text-color);
