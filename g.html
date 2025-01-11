@@ -12,11 +12,24 @@
     <script src="/static/particles.js"></script>
     <style>
    body { color: white; }
-#particles-js{ position:absolute; width: 100%; height: 100%; background-color: black; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
-   /* Content container styles */
-   #content {
-      position: relative; /* Keeps it above the particles */
-   }
+
+#particles-js {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: -1; /* Ensure it's behind all content */
+   pointer-events: none; /* Allow clicks to pass through */
+   background-color: black;
+}
+
+#content {
+  text-align: center;
+  padding: 20px;
+  margin-top: -4%;
+  position: relative; /* Keeps it above the particles */
+  z-index: 1; /* Ensure it's higher than the particles */
    .img {
       z-index: 1;
    }
