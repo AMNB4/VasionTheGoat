@@ -15,7 +15,6 @@
 }
 /* General styles */
 body {
-  background-color: var(--background-color);
   color: var(--text-color);
   font-family: "ubuntu", sans-serif;
   padding: 0;
