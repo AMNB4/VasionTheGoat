@@ -1,0 +1,86 @@
+#header img {
+  width: 20%;
+  height: auto;
+}
+#header {
+  padding: 20px;
+  text-align: center;
+}
+#searchbar {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.form__input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 300px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  background-color: #222;
+  text-align: center;
+  color: #fff;
+  cursor:cell;
+}
+
+.form__input::placeholder {
+  color: #aaa;
+  text-align: center;
+}
+
+.form_input:hover{
+  cursor:cell;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+.light-switch {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.light-switch::after {
+    content: '';
+    width: 23px;
+    height: 23px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: left 0.3s;
+}
+
+.light-switch.active {
+    background-color: #4caf50;
+}
+
+.light-switch.active::after {
+    left: 26px;
+}
+
+#particles-js {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   z-index: -1; /* Ensure it's behind all content */
+   pointer-events: none; /* Allow clicks to pass through */
+   background-color: black;
+}
+
+#content {
+  text-align: center;
+  padding: 20px;
+  margin-top: -4%;
+  position: relative; /* Keeps it above the particles */
+  z-index: 1; /* Ensure it's higher than the particles */
