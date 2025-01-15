@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Games</title>
     <link rel="stylesheet" href="config/main.css" />
     <script src="config/main.js" type="module"></script>
     <script src="/static/navbar.js"></script>
-          <link rel="icon" type="image/x-icon" href="/static/images/frp.png">
-         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/static/images/frp.png">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="/static/particles.js"></script>
     <style>
-   body { color: white; scrollbar-color: transparent transparent; /* Transparent scrollbar for Firefox */}
+        body {
+            color: white;
+            scrollbar-color: transparent transparent; /* Transparent scrollbar for Firefox */
+        }
 
-#particles-js {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: -1;
-   pointer-events: none;
-   background-color: black;
-}
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background-color: black;
+        }
 
-#content {
-  text-align: center;
-  padding: 20px;
-  position: relative; /* Keeps it above the particles */
-  z-index: 1; /* Ensure it's higher than the particles */
-   .img {
-      z-index: 1;
-   }
-</style>
-  </head>
-  <body>
-       <div id="particles-js"><canvas class="particles-js-canvas-el" width="939" height="838" style="width: 100%; height: 100%;"></canvas></div>
+        #content {
+            text-align: center;
+            padding: 20px;
+            position: relative; /* Keeps it above the particles */
+            z-index: 1; /* Ensure it's higher than the particles */
+        }
+            .img {
+                z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="939" height="838" style="width: 100%; height: 100%;"></canvas></div>
     <div id="content">
-    <div class="center">
-      <h1 id="title"></h1>
-      <p id="subtitle"></p>
+        <div class="center">
+            <h1 id="title"></h1>
+            <p id="subtitle"></p>
+        </div>
+        <div class="center">
+            <input type="text" id="searchInput" placeholder="Search games" />
+        </div>
+        <div id="gamesContainer"></div>
+        <div class="footer">
+            <a style="font-weight: 700">
+                a site by
+            </a>purp1e and LIS @ <a style="font-weight: 700" class="link" href="https://discord.gg/bdExKYm3d5">Vasion Network</a> with inspiration from <a style="font-weight: 700" class="link" href="https://dsc.gg/parcoil">nativelite</a>
+        </div>
     </div>
-    <div class="center">
-      <input type="text" id="searchInput" placeholder="Search games" />
-    </div>
-    <div id="gamesContainer"></div>
-    <div class="footer">
-      <a style="font-weight: 700">a site by
-      </a>purp1e and LIS @ <a style="font-weight: 700" class="link" href="https://discord.gg/bdExKYm3d5">Vasion Network</a> with inspiration from <a style="font-weight: 700" class="link" href="https://dsc.gg/parcoil">nativelite</a>
-    </div>
-    </div>
-  </body>
+</body>
 </html>
-
