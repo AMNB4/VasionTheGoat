@@ -46,7 +46,7 @@ border: 3px solid var(--accent-color);
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 500px; /* Set a specific height for scrolling */
+  height: 100%; /* Set a specific height for scrolling */
   padding: 0 20px; /* Horizontal padding */
   box-sizing: border-box;
   overflow: auto; /* Enable scrolling */
