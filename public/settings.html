@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="main-settings-container" id="mainContainer">
+    <div class="settings-container">
+      <h2>Settings</h2>
+
+      <div class="tab">
+        <button id="presetsTab" class="active">Presets</button>
+        <button id="uploadTab">Upload</button>
+        <button id="urlTab">URL</button>
+      </div>
+
+      <div class="tab-content active" id="presetsContent">
+        <label for="particlePreset">Select Particle Preset</label>
+        <select id="particlePreset">
+          <option value="preset1">Default</option>
+        </select>
+      </div>
+
+      <div class="tab-content" id="uploadContent">
+        <label for="bgImageInput">Upload Background (Image/GIF)</label>
+        <input type="file" id="bgImageInput" accept="image/*, .gif" />
+      </div>
+
+      <div class="tab-content" id="urlContent">
+        <label for="bgImageUrl">Background Image URL</label>
+        <input type="url" id="bgImageUrl" placeholder="Enter image URL" />
+      </div>
+
+      <button id="saveSettings">Save Settings</button>
+      <button id="resetSettings">Clear Data</button>
+
+    </div>
+  </div>
+  <script src="/js/settings.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="/js/shared.js" defer></script>
+  <script src="/js/sidebar.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const presetsTab = document.getElementById('presetsTab');
+      const uploadTab = document.getElementById('uploadTab');
+      const urlTab = document.getElementById('urlTab');
+      const presetsContent = document.getElementById('presetsContent');
+      const uploadContent = document.getElementById('uploadContent');
+      const urlContent = document.getElementById('urlContent');
+
+      presetsTab.addEventListener('click', () => {
+        presetsTab.classList.add('active');
+        uploadTab.classList.remove('active');
+        urlTab.classList.remove('active');
+        presetsContent.classList.add('active');
+        uploadContent.classList.remove('active');
+        urlContent.classList.remove('active');
+      });
+
+      uploadTab.addEventListener('click', () => {
+        presetsTab.classList.remove('active');
+        uploadTab.classList.add('active');
+        urlTab.classList.remove('active');
+        presetsContent.classList.remove('active');
+        uploadContent.classList.add('active');
+        urlContent.classList.remove('active');
+      });
+
+      urlTab.addEventListener('click', () => {
+        presetsTab.classList.remove('active');
+        uploadTab.classList.remove('active');
+        urlTab.classList.add('active');
+        presetsContent.classList.remove('active');
+        uploadContent.classList.remove('active');
+        urlContent.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
