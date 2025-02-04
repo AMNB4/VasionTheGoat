@@ -10,8 +10,14 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Indexes
+app.use((req, res, next) => {
+    const indexPath = path.join(__dirname, 'public', req.path, 'index.html');
+    res.sendFile(indexPath, (err) => {
+        if (err) {
+            next();
+        }
+    });
 });
 
 app.get('/@', (req, res) => {
