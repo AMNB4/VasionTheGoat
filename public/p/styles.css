@@ -145,7 +145,7 @@ body {
     opacity: 0.7;
   }
   
-  .proxy {
+  .PR {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,7 +163,7 @@ body {
     position: relative;
   }
   
-  .proxy iframe {
+  .PR iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -173,6 +173,6 @@ body {
     background-color: transparent;
   }
   
-  .proxy:hover {
+  .PR:hover {
     box-shadow: 0 0 20px var(--accent-color), 0 0 30px var(--accent-color);
   }
