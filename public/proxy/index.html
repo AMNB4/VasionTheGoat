@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs/logo/logo.png" type="image/png">
+    <title>PROXY</title>
+    <link rel="stylesheet" href="styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <div id="main">
+<div class="content-wrapper">
+            <center>
+                <iframe id="proxyIframe" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share; accelerometer; magnetometer; gyroscope; display-capture" width="1920px" height="930px" frameborder="0" allow="fullscreen"></iframe>
+            </div></center>
+        </div>
+        <div class="game-bar">
+            <button class="button" onclick="toggleFullscreenPRX()">Fullscreen</button>
+            <button class="button" onclick="refreshIframePRX()">Refresh</button>
+            <button class="button" onclick="goBack()">Back</button>
+            <button class="button" onclick="goForward()">Forward</button>
+
+        </div>
+
+        <script src="options.js"></script>
+
+
+    <script>
+const encodedUrl = localStorage.getItem("url");
+
+if (encodedUrl) {
+    console.log("Encoded URL from localStorage:", encodedUrl);
+
+    // Decode the URL once
+    const decodedUrl = decodeURIComponent(encodedUrl);
+
+    const iframe = document.getElementById("proxyIframe");
+
+    // Set the iframe source to the decoded URL
+    iframe.src = decodedUrl;
+
+    console.log("Iframe source set to:", decodedUrl);
+} else {
+    console.error("No URL found in localStorage.");
+}
+    </script>
+        </div>
+        <script>
+            function applySavedTheme() {
+                const theme = localStorage.getItem('theme') || 'default';
+                document.body.className = theme + "-theme";
+                
+                document.querySelectorAll('.rounded-button').forEach(button => {
+                    button.className = 'rounded-button ' + theme + '-theme';
+                });
+                document.querySelectorAll('input[type="range"]').forEach(range => {
+                    range.className = theme + '-theme';
+                });
+                document.querySelectorAll('select').forEach(select => {
+                    select.className = theme + '-theme';
+                });
+            }
+        
+            document.addEventListener('DOMContentLoaded', applySavedTheme);
+        </script>  
+</body>
+</html>
